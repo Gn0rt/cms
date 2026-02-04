@@ -1,0 +1,116 @@
+/* --- banner --- */
+.banner-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.banner-contain {
+    position: relative;
+    height: 350px;
+}
+
+.banner-contain::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white-color);
+    z-index: 10;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px #fff;
+}
+
+/* --- description --- */
+#contact,
+#description {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 50px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.logo-company {
+    text-align: center;
+}
+
+.logo-company img {
+    height: 200px;
+}
+
+.des-title {
+    font-size: 28px;
+}
+
+.des-content p {
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.picture-des {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.picture-des img {
+    height: 350px;
+}
+
+.list-reason {
+    margin: 10px 0 0 20px;
+}
+
+.reason {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.reason p {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- Contact --- */
+#contact {
+    margin-top: 10px;
+}
+
+.list-contact {
+    list-style: none;
+}
+
+.list-contact li {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.list-contact li i {
+    margin-right: 10px;
+}
+
+.list-contact li span {
+    font-weight: 400;
+    margin-left: 10px;
+}

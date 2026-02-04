@@ -18,26 +18,129 @@
       crossorigin=""
     />
     <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/about.css" />
     <title>Về chúng tôi</title>
   </head>
   <body>
     <header id="header">
       <div class="header-contain">
         <div class="logo">
-          <a href="#">
+          <a href="./index.html">
             <img src="./assets/img/logo1.png" class="logo-img" alt="Logo HMS" />
           </a>
         </div>
         <div class="menu">
           <ul class="list-menu">
-            <li class="item"><a href="#">Trang chủ</a></li>
+            <li class="item"><a href="./index.html">Trang chủ</a></li>
             <li class="item"><a href="">Sản phẩm</a></li>
             <li class="item"><a href="./about.html">Về chúng tôi</a></li>
           </ul>
         </div>
       </div>
     </header>
+
+    <section id="banner">
+      <div class="banner-contain">
+        <img src="./assets/img/ban.png" class="banner-img" alt="" />
+        <div class="banner-text">
+          <h1>Về chúng tôi</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="description">
+      <div class="logo-company">
+        <img src="./assets/img/logo.png" alt="" />
+      </div>
+      <div class="des-content">
+        <h3 class="des-title">Chúng tôi là ai ?</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam
+          impedit, totam sed officia voluptate at iusto aperiam nam? Veniam
+          laboriosam blanditiis eius consequuntur, autem fugiat temporibus
+          laborum ut deserunt, quae illum quia minus dolore dolor labore iure
+          quos saepe voluptatem? Laborum dolores voluptatem praesentium nihil
+          voluptates saepe temporibus assumenda sequi dolorum eius
+          necessitatibus sint ea consectetur sunt neque accusantium debitis
+          optio quos cupiditate iure rem, alias nesciunt sed amet. Non
+          consequuntur aperiam labore ipsa temporibus deserunt vitae molestias
+          voluptatibus ipsam amet sapiente animi, nisi quas fugiat rerum? Cumque
+          ipsa iure nostrum quae voluptatibus officia nemo eveniet possimus
+          itaque, non consequatur.
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, esse?
+          In quis, ullam esse iure, quo possimus deleniti animi quod architecto
+          itaque consequuntur ipsum perspiciatis ab aliquid impedit nihil
+          suscipit, voluptatem temporibus odio sint placeat? Laboriosam
+          molestiae omnis blanditiis unde consequuntur, illum aliquam aperiam
+          sunt corporis voluptas. Voluptates, facilis voluptate!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae
+          perspiciatis esse aut iste ea similique facilis, quod quis facere vero
+          minus incidunt dicta officia nemo numquam architecto sed repellat
+          deleniti autem provident? Cum, molestiae quas veniam excepturi qui quo
+          in sapiente fugiat eaque eveniet dolor repudiandae, dolores ipsa nam
+          rerum.
+        </p>
+        <div class="picture-des">
+          <img src="./assets/img/banner.png" alt="" />
+        </div>
+
+        <h3 class="des-title">Vì sao nên lựa chọn HMS</h3>
+        <ol class="list-reason">
+          <li class="reason">
+            Chất lượng sản phẩm cao
+            <p>
+              Mỗi sản phẩm của BYTECH đều được kiểm soát nghiêm ngặt, tối ưu về
+              độ bền, độ ổn định và hiệu suất.
+            </p>
+          </li>
+          <li class="reason">
+            Chất lượng sản phẩm cao
+            <p>
+              Mỗi sản phẩm của BYTECH đều được kiểm soát nghiêm ngặt, tối ưu về
+              độ bền, độ ổn định và hiệu suất.
+            </p>
+          </li>
+          <li class="reason">
+            Chất lượng sản phẩm cao
+            <p>
+              Mỗi sản phẩm của BYTECH đều được kiểm soát nghiêm ngặt, tối ưu về
+              độ bền, độ ổn định và hiệu suất.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3 class="des-title">
+        Công ty TNHH Giải Pháp Và Phát Triển Công Nghệ HMS
+      </h3>
+      <ul class="list-contact">
+        <li class="contact">
+          <i
+            class="fa-solid fa-location-dot fa-bounce"
+            style="color: #df1111"
+          ></i
+          >Địa chỉ: <span>Thanh Hà, Cienco5, Hà Đông</span>
+        </li>
+        <li class="contact">
+          <i class="fa-solid fa-phone fa-shake" style="color: #74c0fc"></i>Số
+          điện thoại:<span> 0987654321</span>
+        </li>
+        <li class="contact">
+          <i class="fa-solid fa-envelope fa-beat" style="color: #63e6be"></i
+          >Email:<span> info@hms.vn</span>
+        </li>
+        <li class="contact">
+          <i class="fa-solid fa-globe fa-spin" style="color: #74c0fc"></i
+          >Website:<span> www.hms.vn</span>
+        </li>
+      </ul>
+    </section>
 
     <footer id="footer">
       <div class="footer-container">
@@ -62,5 +165,14 @@
       </div>
       <p class="copyright">&copy; 2020 HMS Company. All rights reserved.</p>
     </footer>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
