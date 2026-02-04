@@ -37,4 +37,42 @@ tl.from(
     duration: 0.5,
   },
   0,
-); // Chạy cùng lúc với ảnh
+);
+
+const tlProduct = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#product",
+    start: "top 75%",
+    end: "bottom bottom",
+    toggleActions: "play none none reverse", // Tự chạy khi vào, tua ngược khi lướt lên
+    markers: false,
+  },
+});
+// 1. Hiệu ứng cho Tiêu đề (Hiện rõ dần + Trượt lên)
+tlProduct.from(".product-title", {
+  y: 50, // Dịch chuyển từ dưới lên 50px
+  opacity: 0,
+  duration: 1.2,
+  ease: "power3.out", // Hiệu ứng trượt nhẹ nhàng
+});
+
+// 2. Hiệu ứng cho Khung Carousel (Phóng to + Hiện ra)
+tlProduct.from(
+  ".carousel-container",
+  {
+    scale: 0.8,
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    ease: "back.out(1.7)", // "back.out" tạo hiệu ứng nảy nhẹ (bouncy) rất sinh động
+  },
+  "-=0.5",
+); // "-=0.5" nghĩa là chạy đè lên hiệu ứng trên (bắt đầu sớm hơn 0.5s so với khi tiêu đề kết thúc)
+
+var map = L.map("map").setView([20.93401519194989, 105.78397610888427], 13);
+L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
+  maxZoom: 20,
+  subdomains: ["mt0", "mt1", "mt2", "mt3"],
+}).addTo(map);
+
+var marker = L.marker([20.93401519194989, 105.78397610888427]).addTo(map);

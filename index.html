@@ -11,6 +11,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
     <title>Trang chủ</title>
@@ -82,6 +88,7 @@
 
     <section id="product">
       <h3 class="product-title">Sản phẩm</h3>
+
       <div class="carousel-container">
         <button class="nav-btn prev-btn">❮</button>
         <button class="nav-btn next-btn">❯</button>
@@ -89,7 +96,7 @@
         <div class="carousel-wrapper">
           <ul class="carousel-list">
             <li class="item-slide">
-              <div class="item-pd">
+              <a href="#" class="item-pd">
                 <div class="view-pd">
                   <img src="./assets/img/banner.png" alt="Product" />
                 </div>
@@ -99,9 +106,9 @@
                     Aliquid, facilis.
                   </p>
                 </div>
-              </div>
+              </a>
 
-              <div class="item-pd">
+              <a href="#" class="item-pd">
                 <div class="view-pd">
                   <img src="./assets/img/banner.png" alt="Product" />
                 </div>
@@ -112,9 +119,9 @@
                     adipisicing elit. Aliquid, facilis.
                   </p>
                 </div>
-              </div>
+              </a>
 
-              <div class="item-pd">
+              <a href="#" class="item-pd">
                 <div class="view-pd">
                   <img src="./assets/img/banner.png" alt="Product" />
                 </div>
@@ -124,7 +131,7 @@
                     Aliquid, facilis.
                   </p>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="item-slide"><h2>Page 2</h2></li>
             <li class="item-slide"><h2>Page 3</h2></li>
@@ -134,8 +141,35 @@
       </div>
     </section>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <h4 class="company">
+            Công ty TNHH Giải Pháp Và Phát Triển Công Nghệ HMS
+          </h4>
+          <p class="address">
+            Địa chỉ: <span>Thanh Hà, Cienco5, Hà Đông</span>
+          </p>
+          <p class="phone">Số điện thoại: <span>0987654321</span></p>
+          <p class="mobile">Mobile (Zalo): <span>0987654321</span></p>
+          <p class="email">Email: <span>info@hms.vn</span></p>
+          <p class="website">Website: <span>www.hms.vn</span></p>
+        </div>
+        <div class="footer-follow">
+          <img src="./assets/img/logo.png" alt="" />
+        </div>
+        <div class="footer-map">
+          <div id="map"></div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2020 HMS Company. All rights reserved.</p>
+    </footer>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./assets/js/main.js"></script>
