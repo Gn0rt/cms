@@ -11,20 +11,28 @@
   --white-color: #fff;
   --black-color: #000;
 
-  --primary-color: #c7aa4e; /* vàng chính */
-  --primary-dark: #8c7724; /* vàng trầm */
-  --primary-light: #e3c77b; /* vàng sáng */
+  --primary-color: #c7aa4e;
+  /* vàng chính */
+  --primary-dark: #8c7724;
+  /* vàng trầm */
+  --primary-light: #e3c77b;
+  /* vàng sáng */
 
   /* 💫 Gradient sang trọng */
   --gradient-gold: linear-gradient(135deg, #c7aa4e, #8c7724);
   --gradient-soft: linear-gradient(0, #f4e07d, #c7aa4e, #8c7724);
-  --gradient-night: linear-gradient(180deg, #c7aa4e, #1e3c72); /* vàng + navy */
+  --gradient-night: linear-gradient(180deg, #c7aa4e, #1e3c72);
+  /* vàng + navy */
 
   /* 🧱 Nền & khung */
-  --bg-color: #f9f9f7; /* nền sáng tổng thể */
-  --bg-dark: #1b1b1b; /* nền tối */
-  --card-bg: #ffffff; /* nền khung trắng */
-  --border-color: #ddd5aa; /* viền vàng nhạt */
+  --bg-color: #f9f9f7;
+  /* nền sáng tổng thể */
+  --bg-dark: #1b1b1b;
+  /* nền tối */
+  --card-bg: #ffffff;
+  /* nền khung trắng */
+  --border-color: #ddd5aa;
+  /* viền vàng nhạt */
 
   /* ✍️ Chữ */
   --text-color: #2b2b2b;
@@ -35,7 +43,8 @@
   /* 🪄 Trạng thái / nhấn */
   --hover-color: #b79840;
   --active-color: #8c7724;
-  --accent-color: #3b3b3b; /* phối cùng vàng để nổi bật */
+  --accent-color: #3b3b3b;
+  /* phối cùng vàng để nổi bật */
 }
 
 body {
@@ -84,6 +93,51 @@ body {
 .item a:hover {
   background-color: var(--primary-color);
   color: var(--white-color);
+}
+
+.menu-bar {
+  display: none;
+}
+
+.menu-bar i {
+  color: var(--primary-color);
+  font-size: 20px;
+  padding: 3px;
+}
+
+.list-menu-bar {
+  list-style: none;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: auto;
+  width: 150px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 100;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.list-menu-bar.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-menu-bar li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  display: block;
+  color: var(--white-color);
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.list-menu-bar li:last-child a {
+  border-bottom: none;
 }
 
 /* --- Footer --- */
