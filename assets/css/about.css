@@ -114,3 +114,32 @@
     font-weight: 400;
     margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+
+    .banner-img,
+    .banner-contain {
+        height: 260px;
+    }
+
+    .banner-text {
+        top: 60%;
+    }
+
+    .banner-text h1 {
+        font-size: 30px;
+    }
+
+    #description {
+        margin-top: 50px;
+        align-items: center;
+    }
+
+    .logo-company img {
+        height: 120px;
+    }
+
+    .picture-des img {
+        height: 200px;
+    }
+}
