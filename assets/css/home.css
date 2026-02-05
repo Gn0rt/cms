@@ -49,6 +49,12 @@
 
 /* --- general --- */
 #general {
+  background-color: #eee;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.general-contain {
   margin: 100px auto;
   width: 90%;
   max-width: 1200px;
@@ -56,10 +62,6 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  /* Tạo chiều sâu 3D cho cả slide */
-
-  perspective: 1000px;
-  overflow: hidden;
 }
 
 .general-content h2 {
@@ -201,6 +203,7 @@
 }
 
 @media (max-width: 768px) {
+
   /* -- Banner -- */
   .banner-text {
     left: 50%;

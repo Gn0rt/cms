@@ -76,3 +76,20 @@ L.tileLayer("http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}", {
 }).addTo(map);
 
 var marker = L.marker([20.93401519194989, 105.78397610888427]).addTo(map);
+
+const backToTop = document.querySelector(".backToTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    backToTop.classList.add("show");
+  } else {
+    backToTop.classList.remove("show");
+  }
+});
+
+backToTop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
