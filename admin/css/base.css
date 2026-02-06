@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+
+    --primary-color: #c7aa4e;
+    /* vàng chính */
+    --primary-dark: #8c7724;
+    /* vàng trầm */
+    --primary-light: #e3c77b;
+    /* vàng sáng */
+
+    /* 💫 Gradient sang trọng */
+    --gradient-gold: linear-gradient(135deg, #c7aa4e, #8c7724);
+    --gradient-soft: linear-gradient(0, #f4e07d, #c7aa4e, #8c7724);
+    --gradient-night: linear-gradient(180deg, #c7aa4e, #1e3c72);
+    /* vàng + navy */
+
+    /* 🧱 Nền & khung */
+    --bg-color: #f9f9f7;
+    /* nền sáng tổng thể */
+    --bg-dark: #1b1b1b;
+    /* nền tối */
+    --card-bg: #ffffff;
+    /* nền khung trắng */
+    --border-color: #ddd5aa;
+    /* viền vàng nhạt */
+
+    /* ✍️ Chữ */
+    --text-color: #2b2b2b;
+    --text-light: #ffffff;
+    --text-muted: #7a7a7a;
+    --text-gold: #c7aa4e;
+
+    /* 🪄 Trạng thái / nhấn */
+    --hover-color: #b79840;
+    --active-color: #8c7724;
+    --accent-color: #3b3b3b;
+    /* phối cùng vàng để nổi bật */
+}
+
+#header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.navbar {
+    padding: 5px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.item {
+    flex: 1;
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.item i {
+    margin-right: 8px;
+}
+
+.item.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.item:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}

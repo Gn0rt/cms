@@ -1,0 +1,13 @@
+#content {
+    margin: 20px auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.title {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <title>Admin</title>
+    <style>
+      .gridjs-container {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      input.gridjs-input {
+        border-radius: 6px;
+        border: 1px solid #93c5fd;
+        padding: 6px 10px;
+      }
+      .gridjs-pagination {
+        background: #e0f2fe;
+        border-radius: 0 0 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="../assets/img/logo1.png" alt="" />
+      </div>
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="item"><i class="fa-solid fa-cube"></i>Tổng quan</li>
+          <li class="item active">
+            <i class="fa-solid fa-house"></i>Trang chủ
+          </li>
+          <li class="item"><i class="fa-solid fa-computer"></i>Sản phẩm</li>
+          <li class="item">
+            <i class="fa-solid fa-users-rectangle"></i>Về chúng tôi
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="content">
+      <h2 class="title"><i class="fa-solid fa-house"></i>Quản lý trang chủ</h2>
+      <!-- Nơi render table -->
+      <div id="table1"></div>
+    </section>
+
+    <div id="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Modal Title</h2>
+        <p>This is a sample modal window.</p>
+        <textarea id="summernote" name="Content"></textarea>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script>
+      new gridjs.Grid({
+        columns: [
+          "ID",
+          "Banner",
+          "Giới thiệu",
+          "Sản phẩm",
+          {
+            name: "Thao tác",
+            formatter: (_, row) =>
+              gridjs.html(
+                `<button class="btn" onclick="alert('Sửa: ${row.cells[1].data}')">Sửa</button>`,
+              ),
+          },
+        ],
+        data: [
+          [1, "Banner 1", "Giới thiệu 1", "Sản phẩm 1"],
+          [2, "Banner 2", "Giới thiệu 2", "Sản phẩm 2"],
+          [3, "Banner 3", "Giới thiệu 3", "Sản phẩm 3"],
+          [4, "Banner 4", "Giới thiệu 4", "Sản phẩm 4"],
+          [5, "Banner 5", "Giới thiệu 5", "Sản phẩm 5"],
+          [6, "Banner 6", "Giới thiệu 6", "Sản phẩm 6"],
+          [7, "Banner 7", "Giới thiệu 7", "Sản phẩm 7"],
+          [8, "Banner 8", "Giới thiệu 8", "Sản phẩm 8"],
+          [9, "Banner 9", "Giới thiệu 9", "Sản phẩm 9"],
+          [10, "Banner 10", "Giới thiệu 10", "Sản phẩm 10"],
+        ],
+        pagination: { enabled: true },
+        sort: true,
+        search: false,
+      }).render(document.getElementById("table1"));
+
+      $("#summernote").summernote({
+        placeholder: "Nhập nội dung bài viết...",
+        tabsize: 2,
+        height: 200, // Chiều cao khung soạn thảo
+      });
+    </script>
+  </body>
+</html>

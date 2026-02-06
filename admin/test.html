@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid.js - Admin Panel</title>
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <style>
+      body {
+        background: #f9fafb;
+        font-family: "Roboto", sans-serif;
+        padding: 40px;
+      }
+      h2 {
+        color: #111827;
+      }
+      .btn {
+        background: #2563eb;
+        border: none;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: #1d4ed8;
+      }
+      .badge {
+        padding: 4px 8px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        color: white;
+      }
+      .active {
+        background: #16a34a;
+      }
+      .inactive {
+        background: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>⚙️ Quản lý tài khoản</h2>
+    <div id="table4"></div>
+
+    <script>
+      new gridjs.Grid({
+        columns: [
+          "User ID",
+          "Tên người dùng",
+          {
+            name: "Trạng thái",
+            formatter: (cell) =>
+              gridjs.html(
+                `<span class="badge ${cell === "Hoạt động" ? "active" : "inactive"}">${cell}</span>`,
+              ),
+          },
+          {
+            name: "Thao tác",
+            formatter: (_, row) =>
+              gridjs.html(
+                `<button class="btn" onclick="alert('Sửa: ${row.cells[1].data}')">Sửa</button>`,
+              ),
+          },
+        ],
+        data: [
+          [101, "Nguyễn Văn A", "Hoạt động"],
+          [102, "Trần Thị B", "Khóa"],
+          [103, "Phạm Văn C", "Hoạt động"],
+        ],
+        pagination: { enabled: true, limit: 2 },
+      }).render(document.getElementById("table4"));
+    </script>
+  </body>
+</html>
