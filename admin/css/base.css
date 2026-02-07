@@ -47,8 +47,13 @@
     /* phối cùng vàng để nổi bật */
 }
 
+body {
+    background-color: #e0f2fe69;
+}
+
 #header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
 }
 
 .logo {
@@ -62,6 +67,7 @@
 
 .navbar {
     padding: 5px;
+    display: block;
 }
 
 .nav-menu {

@@ -3,11 +3,127 @@
     padding: 0 10px;
     display: flex;
     justify-content: center;
-    gap: 30px;
     flex-direction: column;
 }
 
 .title {
-    color: var(--primary-color);
+    /* color: var(--primary-color); */
     margin-bottom: 10px;
+}
+
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background: var(--gradient-soft);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.banner-content {
+    flex: 2;
+}
+
+.choose-inmage::file-selector-button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.choose-inmage::file-selector-button:hover {
+    background: var(--hover-color);
+}
+
+.banner-image {
+    margin-top: 5px;
+
+}
+
+.text-content {
+    flex: 3
+}
+
+.text-item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.text-item label {
+    font-size: 14px;
+    flex: 1;
+}
+
+.text-item input {
+    flex: 10;
+    margin-left: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+.saveIntroduce,
+.saveBanner {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.saveIntroduce:hover,
+.saveBanner:hover {
+    background-color: var(--hover-color);
+}
+
+.introduce-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.introduce-title input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    outline: none;
+    flex: 1;
+    margin-left: 10px;
+
+}
+
+.introduce-title label,
+.introduce-content label {
+    font-size: 14px;
+}
+
+.introduce-content label {
+    margin-bottom: 5px;
+    display: inline-block;
 }
