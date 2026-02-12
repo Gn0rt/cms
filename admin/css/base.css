@@ -82,10 +82,17 @@ body {
 
 .item {
     flex: 1;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     text-align: center;
     cursor: pointer;
     transition: background 0.3s;
+}
+
+.item a {
+    text-decoration: none;
+    padding: 10px 100px;
+    display: inline-block;
+    color: var(--black-color);
 }
 
 .item i {
@@ -94,10 +101,17 @@ body {
 
 .item.active {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    /* color: var(--white-color); */
+
+    a {
+        color: var(--white-color);
+    }
 }
 
 .item:hover {
     background-color: var(--primary-color);
-    color: var(--white-color);
+
+    a {
+        color: var(--white-color);
+    }
 }
