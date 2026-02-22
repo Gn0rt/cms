@@ -63,7 +63,7 @@
       <h2 class="title">
         <i class="fa-solid fa-users-rectangle"></i>Quản lý trang về chúng tôi
       </h2>
-      <div class="container-fluid p-3">
+      <div class="container-fluid">
         <div class="card">
           <div class="card-header">
             <i class="fa-solid fa-image"></i> Cấu hình ảnh
@@ -101,12 +101,28 @@
 
         <div class="card">
           <div class="card-header">
-            <i class="fa-solid fa-info-circle"></i> Nội dung
+            <i class="fa-solid fa-info-circle"></i> Về chúng tôi
           </div>
           <div class="card-body">
             <div class="introduce-content">
               <label class="">Nội dung chi tiết</label>
               <textarea id="summernote-intro" name="Content">
+                    <p>Lorem ipsum dolor sit amet...</p>
+                </textarea
+              >
+            </div>
+            <button type="button" class="save-btn">Lưu Giới thiệu</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <i class="fa-solid fa-info-circle"></i> Lý do nên chọn chúng tôi
+          </div>
+          <div class="card-body">
+            <div class="introduce-content">
+              <label class="">Nội dung chi tiết</label>
+              <textarea id="summernote-reason" name="Content">
                     <p>Lorem ipsum dolor sit amet...</p>
                 </textarea
               >
@@ -120,6 +136,11 @@
     <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
     <script>
       $("#summernote-intro").summernote({
+        placeholder: "Nhập nội dung bài viết...",
+        tabsize: 2,
+        height: 200, // Chiều cao khung soạn thảo
+      });
+      $("#summernote-reason").summernote({
         placeholder: "Nhập nội dung bài viết...",
         tabsize: 2,
         height: 200, // Chiều cao khung soạn thảo
