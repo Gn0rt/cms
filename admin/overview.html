@@ -25,8 +25,9 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <link rel="stylesheet" href="./css/base.css" />
-    <!-- <link rel="stylesheet" href="./css/admin.css" /> -->
     <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/overview.css" />
+
     <title>Admin</title>
     <style></style>
   </head>
@@ -37,14 +38,20 @@
       </div>
       <nav class="navbar">
         <ul class="nav-menu">
-          <li class="item"><i class="fa-solid fa-cube"></i>Tổng quan</li>
+          <li class="item active">
+            <a href="./overview.html"
+              ><i class="fa-solid fa-cube"></i>Tổng quan</a
+            >
+          </li>
           <li class="item">
             <a href="./admin.html"
               ><i class="fa-solid fa-house"></i>Trang chủ</a
             >
           </li>
-          <li class="item"><i class="fa-solid fa-computer"></i>Sản phẩm</li>
-          <li class="item active">
+          <li class="item">
+            <a href=""><i class="fa-solid fa-computer"></i>Sản phẩm</a>
+          </li>
+          <li class="item">
             <a href="./about.html"
               ><i class="fa-solid fa-users-rectangle"></i>Về chúng tôi</a
             >
@@ -54,30 +61,17 @@
     </header>
 
     <section id="content">
-      <h2 class="title">
-        <i class="fa-solid fa-house"></i>Quản lý trang về chúng tôi
-      </h2>
+      <h2 class="title"><i class="fa-solid fa-cube"></i>Quản lý footer</h2>
       <div class="container-fluid p-3">
         <div class="card">
           <div class="card-header">
-            <i class="fa-solid fa-image"></i> Cấu hình ảnh
+            <i class="fa-solid fa-image"></i> Logo công ty
           </div>
           <div class="card-body">
             <form id="">
               <div class="card-content">
                 <div class="about-content">
-                  <label class="">Ảnh đầu tiên</label>
-                  <div class="banner-image">
-                    <img
-                      src="../assets/img/ban.png"
-                      class="img-thumbnail"
-                      style="height: 150px; width: 100%; object-fit: cover"
-                    />
-                  </div>
-                  <input type="file" class="choose-inmage" />
-                </div>
-                <div class="about-content">
-                  <label class="">Ảnh thứ hai</label>
+                  <label class="">Logo</label>
                   <div class="banner-image">
                     <img
                       src="../assets/img/ban.png"
@@ -98,12 +92,25 @@
             <i class="fa-solid fa-info-circle"></i> Nội dung
           </div>
           <div class="card-body">
-            <div class="introduce-content">
-              <label class="">Nội dung chi tiết</label>
-              <textarea id="summernote-intro" name="Content">
-                    <p>Lorem ipsum dolor sit amet...</p>
-                </textarea
-              >
+            <div class="form-card">
+              <label for="">Địa chỉ</label>
+              <input type="text" />
+            </div>
+            <div class="form-card">
+              <label for="">Số điện thoại</label>
+              <input type="text" />
+            </div>
+            <div class="form-card">
+              <label for="">Zalo</label>
+              <input type="text" />
+            </div>
+            <div class="form-card">
+              <label for="">Email</label>
+              <input type="text" />
+            </div>
+            <div class="form-card">
+              <label for="">Website</label>
+              <input type="text" />
             </div>
             <button type="button" class="save-btn">Lưu Giới thiệu</button>
           </div>
