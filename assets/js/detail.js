@@ -23,3 +23,18 @@ thumbnails.forEach((thumb) => {
     });
   });
 });
+
+const listsInfo = document.querySelectorAll(".list-info li");
+const infoContents = document.querySelectorAll(
+  ".infomation-product .info-content",
+);
+
+listsInfo.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    listsInfo.forEach((item) => item.classList.remove("active"));
+    infoContents.forEach((content) => content.classList.remove("active"));
+
+    item.classList.add("active");
+    infoContents[index].classList.add("active");
+  });
+});

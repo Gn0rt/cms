@@ -133,6 +133,12 @@
     margin-top: 50px;
 }
 
+.infomation-product {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
 .list-info {
     display: flex;
     list-style: none;
@@ -155,6 +161,7 @@
     padding: 20px;
     background-color: var(--primary-color);
     display: none;
+
 }
 
 .info-content.active {
