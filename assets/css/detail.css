@@ -1,0 +1,140 @@
+#detail {
+    margin-top: 100px;
+    width: 90%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.detail-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+.detail-content {
+    flex: 2;
+}
+
+.detail-service {
+    flex: 1;
+}
+
+.detail-image img {
+    height: 300px;
+    border-radius: 8px;
+}
+
+.carousel-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.carousel-list {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.carousel-list img {
+    height: 70px;
+    cursor: pointer;
+}
+
+.detail-container {
+    display: flex;
+    gap: 20px;
+}
+
+.detail-content p {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: var(--black-color);
+    text-align: justify;
+}
+
+.detail-service-content {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.detail-service-content h4 {
+    color: var(--white-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#form-service input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--primary-light);
+    color: var(--white-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+}
+
+#infomation {
+    margin-top: 50px;
+}
+
+.list-info {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.list-info li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.list-info li.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.info-content {
+    /* margin-top: 20px; */
+    padding: 20px;
+    background-color: var(--primary-color);
+    display: none;
+}
+
+.info-content.active {
+    display: block;
+}
+
+.info-content h4 {
+    font-size: 26px;
+    color: var(--white-color);
+    margin-bottom: 20px;
+}
+
+.info-content p {
+    color: var(--white-color);
+    line-height: 1.6;
+    text-align: justify;
+}
