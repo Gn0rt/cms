@@ -148,12 +148,17 @@ body {
   color: var(--white-color);
   padding: 20px;
   position: relative;
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 50px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .footer-content p {
